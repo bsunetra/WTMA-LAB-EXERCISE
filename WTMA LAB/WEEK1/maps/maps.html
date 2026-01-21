@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maps</title>
+
+    <style>
+        h1{
+            text-align: center
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+            background-color: goldenrod;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        iframe {
+            border: 2px solid #444;
+            align-items: center;
+        }
+        .big-link {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+    </style>
+
+    
+</head>
+<body>
+    <h1>EMBEDDING</h1>
+    <h2>MAPS</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144102535!2d2.2919063768464834!3d48.85837360070716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sin!4v1768986258477!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><br>
+
+    <h2>LINKS</h2>
+    <li><a href="https://en.wikipedia.org/wiki/Eiffel_Tower" target="_blank" class="big-link">Go to Wikipedia</a></li> 
+<li><a href="https://www.google.com/search?q=eiffel+tower" target="_blank" class="big-link">Go to Google</a></li>
+
+    <br><br>
+    <!-- HOTSPOTS USING IMAGE MAP -->
+    <h2>Image Map with Hotspots</h2>
+    <img src="https://i.imgur.com/6Iej2cE.jpg" width="500" usemap="#mymap" alt="World Map">
+
+    <map name="mymap">
+
+        <area shape="circle" coords="300,200,25" href="https://en.wikipedia.org/wiki/India" target="_blank" alt="India">
+
+    </map>
+
+    <hr>
+    <h2>Frames Example</h2>
+
+    <iframe src="https://www.wikipedia.org" width="400" height="250"></iframe>
+    <iframe src="https://www.google.com" width="400" height="250"></iframe>
+
+</body>
+</html>
