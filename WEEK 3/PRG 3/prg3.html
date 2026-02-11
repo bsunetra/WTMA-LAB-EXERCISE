@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <STYLE>
+        body{
+            background-color: rgb(148, 228, 181);
+        
+        }
+        .container{
+            background-color: bisque;
+            text-align: center;
+        }
+        
+    </STYLE>
+<head>
+ <title>Mouse Events Using DOM</title>
+<script>
+function mouseOver() {
+ var element = document.getElementById("demo");
+ element.style.color = "white";
+ element.style.backgroundColor = "green";
+ document.getElementById("msg").innerHTML =
+ "Mouse Over Event Triggered";
+}
+function mouseOut() {
+ var element = document.getElementById("demo");
+ element.style.color = "black";
+ element.style.backgroundColor = "lightgray";
+ document.getElementById("msg").innerHTML =
+ "Mouse Out Event Triggered";
+}
+function mouseClick() {
+ document.getElementById("msg").innerHTML =
+ "Mouse Click Event Triggered";
+}
+</script>
+</head>
+<body>
+<h2>Mouse Events Demo</h2>
+<div id="demo"
+ onmouseover="mouseOver()"
+ onmouseout="mouseOut()"
+ onclick="mouseClick()"
+ style="
+ width:250px;
+ padding:20px;
+ background-color:lightgray;
+ text-align:center;
+ cursor:pointer;
+ ">
+ Move Mouse Here
+</div>
+<br>
+<p id="msg"></p>
+</body>
+</html>

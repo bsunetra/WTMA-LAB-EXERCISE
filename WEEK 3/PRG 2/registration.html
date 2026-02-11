@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Registration Form Validation</title> 
+<script> 
+function validateForm() { 
+ // Fetch values 
+ var fname = document.getElementById("fname").value; 
+ var lname = document.getElementById("lname").value; 
+ var password = document.getElementById("password").value; 
+ var email = document.getElementById("email").value; 
+ var mobile = document.getElementById("mobile").value; 
+ var address = document.getElementById("address").value; 
+ // First Name Validation 
+ var namePattern = /^[A-Za-z]{6,}$/; 
+ if (!namePattern.test(fname)) { 
+ alert("First Name must contain alphabets and minimum 6 characters"); 
+ return false; 
+ } 
+ // Password Validation 
+ if (password.length < 6) { 
+ alert("Password must be at least 6 characters long"); 
+ return false; 
+ } 
+ // Email Validation 
+ var emailPattern = 
+ /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+ if (!emailPattern.test(email)) { 
+ alert("Enter valid Email ID (name@domain.com)"); 
+ return false; 
+ } 
+ // Mobile Number Validation 
+ var mobilePattern = /^[0-9]{10}$/; 
+ if (!mobilePattern.test(mobile)) { 
+ alert("Mobile number must contain exactly 10 digits"); 
+ return false; 
+ } 
+ // Last Name Validation 
+ if (lname == "") { 
+ alert("Last Name should not be empty"); 
+ return false; 
+ } 
+ // Address Validation 
+ if (address == "") { 
+ alert("Address should not be empty"); 
+ return false; 
+ } 
+ // If all validations pass 
+ alert("Form Validated Successfully!"); 
+ return true; // allows submission to dummy file 
+} 
+</script> 
+</head> 
+<body> 
+<h2>Registration Form</h2> 
+<form 
+ action="success.html" 
+ method="post" 
+ name="regForm" 
+ onsubmit="return validateForm()" 
+> 
+First Name: 
+<input type="text" id="fname" name="fname"><br><br> 
+Last Name: 
+<input type="text" id="lname" name="lname"><br><br> 
+Password: 
+<input type="password" id="password" name="password"><br><br> 
+Email ID: 
+<input type="text" id="email" name="email"><br><br> 
+Mobile Number: 
+<input type="text" id="mobile" name="mobile"><br><br> 
+Address: 
+<textarea id="address" name="address"></textarea><br><br> 
+<input type="submit" value="Submit"> 
+</form> 
+</body> 
+</html> 
