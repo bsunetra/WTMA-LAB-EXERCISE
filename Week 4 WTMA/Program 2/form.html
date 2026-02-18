@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Student</title>
+
+<style>
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    font-family:Cambria;
+    background:linear-gradient(-45deg,#da4a8d,#15548f,#6878d6,#22c7e4);
+    background-size:400% 400%;
+    animation:dramaticBG 15s ease infinite;
+    color:white;
+}
+
+@keyframes dramaticBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+form{
+    width:400px;
+    padding:25px;
+    border-radius:12px;
+    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.15);
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:6px;
+}
+
+button{
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Add Student</h2>
+
+<form id="studentForm">
+<input type="text" id="student_id" placeholder="Student ID" required>
+<input type="text" id="name" placeholder="Name" required>
+<input type="number" id="age" placeholder="Age" required>
+<input type="text" id="grade" placeholder="Grade" required>
+<input type="email" id="email" placeholder="Email" required>
+<input type="text" id="address" placeholder="Address" required>
+<input type="tel" id="phone" placeholder="Phone" required>
+
+<button type="submit">Save Student</button>
+</form>
+
+<br>
+<button onclick="location.href='index1.html'">Back</button>
+
+<script src="form.js"></script>
+
+</body>
+</html>

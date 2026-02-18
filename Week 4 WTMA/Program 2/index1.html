@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>STUDENT DETAILS</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            min-height:100vh;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align:center;
+            background: linear-gradient(-45deg, #da4a8d, #15548f, #6878d6, #22c7e4);
+            background-size:400% 400%;
+            animation:dramaticBG 15s ease infinite;
+            color:white;
+        }
+
+        @keyframes dramaticBG{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+
+        h1{
+            margin-top:50px;
+            font-size:40px;
+        }
+
+        button{
+            margin:15px 10px;
+            padding:12px 25px;
+            border:none;
+            border-radius:6px;
+            font-size:16px;
+            cursor:pointer;
+            color:white;
+            background:linear-gradient(45deg,#00d9ff,#2e8b57);
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:scale(1.05);
+        }
+
+        table{
+            width:90%;
+            margin:40px auto;
+            border-collapse:collapse;
+            backdrop-filter:blur(10px);
+            background:rgba(255,255,255,0.1);
+            border-radius:12px;
+            overflow:hidden;
+        }
+
+        table th, table td{
+            padding:14px;
+            text-align:center;
+        }
+
+        table th{
+            background:rgba(0,0,0,0.6);
+        }
+
+        table td{
+            background:rgba(255,255,255,0.05);
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>STUDENT DETAILS</h1>
+
+<button onclick="location.href='form.html'">ADD STUDENT</button>
+<button id="loaddata">LOAD STUDENT DATA</button>
+<button id="cleardata">CLEAR STUDENT DATA</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Phone</th>  
+        </tr>
+    </thead>
+    <tbody id="students"></tbody>
+</table>
+
+<script src="script1.js"></script>
+
+</body>
+</html>
